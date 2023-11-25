@@ -1,5 +1,11 @@
 package umu.tds.apps.AppMusic.repository;
 
-public class UserRepository {
+import org.hibernate.SessionFactory;
 
+import umu.tds.apps.AppMusic.model.User;
+
+public class UserRepository extends AbstractRepository<User>{
+	public UserRepository(SessionFactory sessionFactory, Class<User> entityType) {
+		super(sessionFactory, entityType);
+	}
 }
