@@ -4,7 +4,7 @@ import org.hibernate.SessionFactory;
 import umu.tds.apps.AppMusic.model.Song;
 
 public class SongRepository extends AbstractRepository<Song>{
-	public SongRepository(SessionFactory sessionFactory, Class<Song> entityType) {
-		super(sessionFactory, entityType);
+	public SongRepository(SessionFactory sessionFactory) {
+		super(sessionFactory, Song.class);
 	}
 }
